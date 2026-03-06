@@ -10,7 +10,7 @@ function App() {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8080");
+    const ws = new WebSocket("https://chat-backend-1-0dru.onrender.com/");
 
     ws.onmessage = (event) => {
       setMessages((m) => [...m, event.data]);
@@ -84,5 +84,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
